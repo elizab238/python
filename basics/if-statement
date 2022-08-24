@@ -1,0 +1,20 @@
+import random
+
+def get_choices():
+  player_choice = input("choose your choice'(rock', 'paper', 'scissors' : ")
+  options = ('rock', 'paper', 'scissors')
+  computer_choice = random.choice(options)
+  choices = {'player': player_choice, 'computer': computer_choice}
+  return choices
+#if and elif statements in python
+def win_check(player, computer):
+  print(f"you chose  {player}, computer chose {computer}")
+  if player == computer:
+    return 'its a tie!!'
+  elif player == 'rock' and computer == 'scissors':
+    return 'rock smashes scissors: you win!'
+  elif player == 'rock' and computer == 'paper':
+    return 'paper covers rock: you loose.'
+
+  win_check('rock', 'paper')
+  
